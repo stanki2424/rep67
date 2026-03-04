@@ -9,7 +9,7 @@ st.header("Търсене по заглавие")
 search_title = st.text_input("Въведи заглавие")
 
 if st.button("Търси по заглавие"):
-    found = False
+    found = True
 
     for book in st.session_state.books:
         if search_title.lower() in book["title"].lower():
