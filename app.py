@@ -1,7 +1,7 @@
 import streamlit as st
 
 # ИНИЦИАЛИЗИРАНЕ НА ПАМЕТТА ЗА КНИГИТЕ
-if "books" not in st.session_state:
+if "books" not in st.session_state.books:
     st.session_state.books = [Harry Potter, Percy Jackson]   # Можеш да заредиш примерни книги тук
 
 
@@ -20,7 +20,6 @@ if st.button("Търси по заглавие"):
         st.write("Няма намерени книги с това заглавие.")
 
 
-# --- ТЪРСЕНЕ ПО АВТОР ---
 st.header("Търсене по автор")
 search_author = st.text_input("Въведи име на автор")
 
