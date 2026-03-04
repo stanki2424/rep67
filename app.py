@@ -1,15 +1,14 @@
 import streamlit as st
 
 # ИНИЦИАЛИЗИРАНЕ НА ПАМЕТТА ЗА КНИГИТЕ
-if "books" not in st.session_state.books:
-    st.session_state.books = []   # Можеш да заредиш примерни книги тук
-
+if "books" not in st.session_state:
+    st.session_state.books = []
 
 st.header("Търсене по заглавие")
 search_title = st.text_input("Въведи заглавие")
 
 if st.button("Търси по заглавие"):
-    found = True
+    found = False
 
     for book in st.session_state.books:
         if search_title.lower() in book["title"].lower():
