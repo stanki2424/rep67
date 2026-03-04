@@ -2,7 +2,7 @@ import streamlit as st
 
 # ИНИЦИАЛИЗИРАНЕ НА ПАМЕТТА ЗА КНИГИТЕ
 if "books" not in st.session_state.books:
-    st.session_state.books = [Harry Potter, Percy Jackson]   # Можеш да заредиш примерни книги тук
+    st.session_state.books = []   # Можеш да заредиш примерни книги тук
 
 
 st.header("Търсене по заглавие")
